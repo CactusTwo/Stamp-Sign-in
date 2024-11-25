@@ -1,0 +1,80 @@
+{
+    "output_file": "config.json",
+
+    "liveOnly": {
+        "type": "checkbox",
+        "value": true,
+        "label": "Live Only Mode",
+        "tooltip": "True if you want it to only run when you are live",
+        "group" : "General"
+    },
+    "command": {
+        "type": "textbox",
+        "value": "!stamp",
+        "label": "Command",
+        "tooltip": "Name of the command",
+        "group": "General"
+    },
+    "permission": {
+        "type": "dropdown",
+        "value": "Everyone",
+        "items": ["Everyone","Regular","Sponsor", "Subscriber","Moderator","Editor"],
+        "label": "Permission level",
+        "tooltip": "Set the permission level for the command",
+        "group": "General"
+    },
+ 
+    "useCooldown": {
+        "type": "checkbox",
+        "value": true,
+        "label": "Use Cooldowns",
+        "tooltip": "Enable/Disable cooldown and user cooldown",
+        "group": "Cooldown"
+    },
+    "useCooldownMessages": {
+        "type": "checkbox",
+        "value": true,
+        "label": "Use Cooldown Messages",
+        "tooltip": "Enable/Disable cooldown messages",
+        "group": "Cooldown"
+    },
+
+    "userCooldown": {
+        "type": "numberbox",
+        "label": "User Cooldown (seconds)",
+        "value": 1,
+        "tooltip": "User cooldown in seconds.",
+        "group": "Cooldown"
+    },
+    "onUserCooldown": {
+        "type": "textbox",
+        "value": "$user, you've already signed in!",
+        "label": "User Cooldown Response",
+        "tooltip": "The message that the bot will display when the command is on user cooldown. \r\n $user = Username \r\n $cd = Time remaining \r\n $command = Command name",
+        "group": "Cooldown"
+    },
+
+    "allowStamps": {
+        "type": "checkbox",
+        "value": true,
+        "label": "Allow Different Stamps",
+        "tooltip": "Allow users to choose their stamp",
+        "group": "General"
+    },
+
+    "allowCards": {
+        "type": "checkbox",
+        "value": true,
+        "label": "Allow Different Cards",
+        "tooltip": "Allow users to choose their card",
+        "group": "General"
+    },
+
+    "response": {
+        "type": "textbox",
+        "value": "Welcome, $user! you signed in with stamp $stamp on card $card!  you've signed in $points times!",
+        "label": "User sign-in message",
+        "tooltip": "Message that will be posted when the user signs in.\r\n $user = Username\r\n $points = Current user points",
+        "group": "Response Messages"
+    }
+}
